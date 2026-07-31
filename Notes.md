@@ -92,3 +92,4 @@ Cmds:
  git config --global user.email "email"
  git init
  git status
+ 
