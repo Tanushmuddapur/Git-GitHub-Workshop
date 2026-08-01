@@ -50,6 +50,13 @@ Syntax
 -git checkout -b new branch name
 -git checkout new branch name and old branch name
 
+PS D:\BCA\Git & GitHub Workshop> git branch      
+* bug
+  master
+PS D:\BCA\Git & GitHub Workshop> git checkout -b feature
+Switched to a new branch 'feature'
+PS D:\BCA\Git & GitHub Workshop> 
+
 Switch Branch:
 Syntax
 -git switch branchname
@@ -93,3 +100,123 @@ Cmds:
  git init
  git status
  
+ <cms to run in terminal:>
+ PS D:\BCA\Git & GitHub Workshop> git init
+PS D:\BCA\Git & GitHub Workshop>  git config --global user.email "tanushmuddapur@gmail.com"
+PS D:\BCA\Git & GitHub Workshop> git init                                                  
+PS D:\BCA\Git & GitHub Workshop> git status
+PS D:\BCA\Git & GitHub Workshop> git add cmd.py
+PS D:\BCA\Git & GitHub Workshop> git status    
+PS D:\BCA\Git & GitHub Workshop> git add.  
+PS D:\BCA\Git & GitHub Workshop> git add .
+PS D:\BCA\Git & GitHub Workshop> git status
+PS D:\BCA\Git & GitHub Workshop> git commit -m "intial commit "
+PS D:\BCA\Git & GitHub Workshop> git status                    
+PS D:\BCA\Git & GitHub Workshop> git log   
+commit 01bfd0adbf5e2fb269455e53a77a66bca01ed700 (HEAD -> master)
+Author: Tanushmuddapur <tanushmuddapur@gmail.com>
+Date:   Fri Jul 31 14:58:51 2026 +0530
+
+    intial commit
+PS D:\BCA\Git & GitHub Workshop> git remote add origin https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git
+PS D:\BCA\Git & GitHub Workshop> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git'
+PS D:\BCA\Git & GitHub Workshop> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git'
+PS D:\BCA\Git & GitHub Workshop> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git'
+PS D:\BCA\Git & GitHub Workshop> git branch
+>> 
+* master
+PS D:\BCA\Git & GitHub Workshop> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git'
+PS D:\BCA\Git & GitHub Workshop> git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git'
+PS D:\BCA\Git & GitHub Workshop> git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.32 KiB | 1.32 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+PS D:\BCA\Git & GitHub Workshop> git status               
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Notes.md
+        modified:   cmd.py
+        modified:   std.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\BCA\Git & GitHub Workshop> git add .
+PS D:\BCA\Git & GitHub Workshop> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Notes.md
+        modified:   cmd.py
+        modified:   std.txt
+
+PS D:\BCA\Git & GitHub Workshop> git commit -m "feat:new line added"
+[master 7c7e110] feat:new line added
+ 3 files changed, 7 insertions(+), 1 deletion(-)
+PS D:\BCA\Git & GitHub Workshop> git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 419 bytes | 419.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Tanushmuddapur/Git-GitHub-Workshop.git
+   01bfd0a..7c7e110  master -> master
+PS D:\BCA\Git & GitHub Workshop> git branch
+* master
+PS D:\BCA\Git & GitHub Workshop> git branch bug
+PS D:\BCA\Git & GitHub Workshop> git branch    
+  bug
+* master
+PS D:\BCA\Git & GitHub Workshop> git checkout branch
+error: pathspec 'branch' did not match any file(s) known to git
+PS D:\BCA\Git & GitHub Workshop> git branch         
+  bug
+* master
+PS D:\BCA\Git & GitHub Workshop> git checkout bug
+PS D:\BCA\Git & GitHub Workshop> git branch      
+* bug
+  master
+PS D:\BCA\Git & GitHub Workshop> git checkout -b feature
+PS D:\BCA\Git & GitHub Workshop> git checkout bug2      
+error: pathspec 'bug2' did not match any file(s) known to git
+PS D:\BCA\Git & GitHub Workshop> git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+PS D:\BCA\Git & GitHub Workshop> git checkout master
+PS D:\BCA\Git & GitHub Workshop> git checkout bug2  
+PS D:\BCA\Git & GitHub Workshop> git branch bug2        
+PS D:\BCA\Git & GitHub Workshop> git branch bug2 bug
+PS D:\BCA\Git & GitHub Workshop> git branch             
+  bug
+* bug2
+  feature
+  master
+PS D:\BCA\Git & GitHub Workshop> git push --set -upstream origin bug2
+PS D:\BCA\Git & GitHub Workshop> git push -u origin bug
+PS D:\BCA\Git & GitHub Workshop> git push -u origin feature
+PS D:\BCA\Git & GitHub Workshop> git branch bug2
+PS D:\BCA\Git & GitHub Workshop> git branch bug2 bug
+PS D:\BCA\Git & GitHub Workshop> git branch         
+PS D:\BCA\Git & GitHub Workshop> git push -u origin bug2   
